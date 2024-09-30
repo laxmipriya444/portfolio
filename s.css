@@ -18,8 +18,8 @@ a {
 
 /* Header */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #111;
     padding: 20px 0;
 }
 
@@ -29,6 +29,11 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px; /* Add padding */
+}
+
+.logo h1 {
+    margin: 0; /* Remove default margin */
 }
 
 .nav-links {
@@ -37,10 +42,51 @@ nav {
     gap: 20px;
 }
 
-.nav-links li a {
-    color: #fff;
-    font-size: 16px;
+/* Menu Toggle */
+.menu-toggle {
+    display: none; /* Hide checkbox */
 }
+
+.menu-icon {
+    display: none; /* Hide the menu icon initially */
+    font-size: 24px; /* Size of the icon */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.nav-links {
+    display: flex; /* Show links in a row */
+}
+
+.nav-links li a {
+    color: #111;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show menu icon on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position links absolutely */
+        top: 70px; /* Position below the header */
+        right: 20px; /* Align to the right */
+        background-color: #fff; /* Background color for links */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+        padding: 10px; /* Padding for dropdown */
+        border-radius: 5px; /* Rounded corners */
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex; /* Show links when checkbox is checked */
+    }
+}
+
 
 /* Hero Section */
 .hero {
@@ -104,6 +150,61 @@ button {
     margin-bottom: 10px;
 }
 
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .profile-img img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin: 30px auto;
+        padding: 0 10px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        margin: 15px 0;
+    }
+
+    .posts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h2 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+
+    .recent-posts h3 {
+        font-size: 20px;
+    }
+
+    .post {
+        width: 100%;
+    }
+}
+
 /* Featured Works */
 #featured-works {
     padding: 50px 0;
@@ -132,10 +233,47 @@ button {
     border-radius: 5px;
 }
 
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .works {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .work {
+        width: 45%; /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #featured-works {
+        padding: 30px 0; /* Reduce padding for smaller screens */
+    }
+
+    .featured-works h3 {
+        font-size: 20px; /* Decrease font size */
+    }
+
+    .work {
+        width: 90%; /* Full width for smaller screens */
+        margin: 0 auto; /* Center the work */
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-works h3 {
+        font-size: 18px; /* Further decrease font size */
+    }
+
+    .work {
+        margin-bottom: 20px; /* Add space between works */
+    }
+}
+
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #f9f9f9;
+    color: #333;
     padding: 20px;
     text-align: center;
 }
@@ -148,6 +286,8 @@ footer {
     width: 24px;
     height: 24px;
 }
+
+/* blog section */
 #blog-section {
     max-width: 1200px;
     margin: 50px auto;
@@ -191,38 +331,91 @@ footer {
     line-height: 1.6;
 }
 
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    #blog-section {
+        padding: 0 15px; /* Adjust padding for medium screens */
     }
 
-    .profile-img img {
-        margin-top: 40px;
-        height: 100px;
-        width: 100px;
+    .blog-post h3 {
+        font-size: 22px; /* Slightly decrease heading size */
     }
 
-    .posts, .works {
-        flex-direction: column;
+    .blog-post p {
+        font-size: 15px; /* Adjust paragraph font size */
     }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .blog-section {
-    padding: 0 10px;
-    }
-
-.blog-post {
-    padding: 15px;
 }
 
-.blog-post h3 {
-    font-size: 20px;
-    }
+@media (max-width: 768px) {
+    #blog-section {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+    .blog-section h2 {
+        font-size: 30px; /* Decrease heading size */
+    }
+
+    .blog-list {
+        flex-direction: column; /* Ensure posts stack vertically */
+    }
+
+    .blog-post {
+        padding: 15px; /* Adjust padding for posts */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-section h2 {
+        font-size: 24px; /* Further decrease heading size */
+    }
+
+    .blog-post h3 {
+        font-size: 20px; /* Adjust post title size */
+    }
+
+    .blog-post p {
+        font-size: 14px; /* Adjust paragraph font size for readability */
+    }
+
+    .blog-post span {
+        font-size: 12px; /* Decrease font size for the date */
+    }
+}
+
+/* Work Section */
+
+.work1 {
+    width: 100vw; /* Corrected width value */
+    height: auto; /* Changed height to auto for responsiveness */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjusted shadow for better visibility */
+}
+
+.imgw1 {
+    float: left; /* Float the image to the left */
+    margin: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .work1 {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .imgw1 {
+        margin: 5px; /* Reduce margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .work1 {
+        width: 100%; /* Use full width on smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .imgw1 {
+        float: none; /* Remove float to stack images vertically */
+        display: block; /* Ensure the image is treated as a block element */
+        margin: 10px auto; /* Center the image with auto margins */
+    }
 }

@@ -1,10 +1,12 @@
+Portfolio
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="/s.css">
 </head>
 <body>
 
@@ -14,13 +16,16 @@
             <div class="logo">
                 <h1>Portfolio</h1>
             </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label> <!-- Hamburger icon -->
             <ul class="nav-links">
-                <li><a href="#featured-works">Works</a></li>
+                <li><a href="#work1">Works</a></li>
                 <li><a href="#blog-section">Blog</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
+    
 
     <!-- Hero Section -->
     <section class="hero">
@@ -30,7 +35,7 @@
             <button>Download Resume</button>
         </div>
         <div class="profile-img">
-            <img src="./cef71118b981f39b6fbf1e69fd01d1b4.jpg" alt="Profile Photo">
+            <img src="/cef71118b981f39b6fbf1e69fd01d1b4.jpg" alt="Profile Photo">
         </div>
     </section>
 
@@ -56,25 +61,26 @@
         <h3>Featured Works</h3>
         <div class="works">
             <div class="work">
-                <img src="./OIP.jpeg" alt="Designing Dashboards">
+                <img src="/OIP.jpeg" alt="Designing Dashboards">
                 <h4>Designing Dashboards</h4>
                 <span>2020 | Dashboard</span>
                 <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
             </div>
             <div class="work">
-                <img src="./OIP (1).jpeg" alt="Vibrant Portraits of 2020">
+                <img src="/OIP (1).jpeg" alt="Vibrant Portraits of 2020">
                 <h4>Vibrant Portraits of 2020</h4>
                 <span>2018 | Illustration</span>
                 <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
             </div>
             <div class="work">
-                <img src="./Malayalam-1152.jpg" alt="36 Days of Malayalam type">
+                <img src="/Malayalam-1152.jpg" alt="36 Days of Malayalam type">
                 <h4>36 Days of Malayalam type</h4>
                 <span>2018 | Typography</span>
                 <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
             </div>
         </div>
     </section>
+
         <!-- Blog Section -->
         <section id="blog-section">
             <h2>Blog</h2>
@@ -101,15 +107,59 @@
                 </div>
             </div>
         </section>
-    
+
+    <!-- Work Section -->
+
+    <div class="work1" id="work1">
+        <h1 style="margin-left: 20px;">Work</h1>
+        <section class="w1">
+            <span>
+                <img src="/OIP.jpeg" alt="" class="imgw1">
+                <h1>Designing Dashboards</h1><br>
+                <button style="border-radius: 30px; background-color: #142850;">2020</button>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+
+            </span>
+        </section><br><br><br>
+
+        <section class="w1">
+            <span>
+                <img src="/OIP (1).jpeg" alt="" class="imgw1">
+                <h1>Vibrant Portraits of 2020</h1><br>
+                <button style="border-radius: 30px; background-color: #142850;">2018</button>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+
+            </span>
+        </section><br><br><br>
+
+        <section class="w1">
+            <span>
+                <img src="/Malayalam-1152.jpg" alt="" class="imgw1">
+                <h1>36 Days of Malayalam type</h1><br>
+                <button style="border-radius: 30px; background-color: #142850;">2018</button>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+
+            </span>
+        </section><br><br><br><br>
+
+        <section class="w1">
+            <span>
+                <img src="/Rectangle 40.png" alt="" class="imgw1">
+                <h1>Components</h1><br>
+                <button style="border-radius: 30px; background-color: #142850;">2018</button>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+
+            </span>
+        </section>
+    </div><br>
 
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="#"><img src="./facebook_logos_PNG19759.png" alt="Facebook"></a>
-            <a href="#"><img src="./Twitter-new-logo.jpeg" alt="Twitter"></a>
-            <a href="#"><img src="./instagram-logo-instagram-logo-transparent-instagram-icon-transparent-free-free-png.webp" alt="Instagram"></a>
-            <a href="#"><img src="./OIP (2).jpeg" alt="LinkedIn"></a>
+            <a href="#"><img src="./image/fb.png" alt="Facebook"></a>
+            <a href="#"><img src="./image/Group.png" alt="Twitter"></a>
+            <a href="#"><img src="./image/insta.png" alt="Instagram"></a>
+            <a href="#"><img src="./image/Linkedin.png" alt="LinkedIn"></a>
         </div>
         <p>&copy; 2020 All rights reserved</p>
     </footer>
