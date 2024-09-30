@@ -390,7 +390,7 @@ footer {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjusted shadow for better visibility */
 }
 
-.imgw1 {
+.img w1 {
     float: left; /* Float the image to the left */
     margin: 10px;
 }
@@ -402,7 +402,7 @@ footer {
         padding: 20px; /* Add padding for better spacing */
     }
 
-    .imgw1 {
+    .img w1 {
         margin: 5px; /* Reduce margin for smaller screens */
     }
 }
